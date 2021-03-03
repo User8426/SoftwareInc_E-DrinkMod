@@ -1,0 +1,78 @@
+SoftwareType
+	{
+	Name			"E-Drink"
+	Category		Default
+	Description		"Everyone needs a drink, so why not digtialise it?"
+	Random			0.1
+	IdealPrice		20
+	OptimalDevTime		18
+	OSSupport		True
+	OneClient		False
+	InHouse			False
+	SubmarketNames		[ Taste; Alcoholic; Healthiness ]
+	Categories
+		[
+			{
+			Name			"Default"
+			Description		"Default"
+			Popularity		0.8
+			Submarkets		[ 1; 1; 1 ]
+			Retention		12
+			TimeScale		1
+			Iterative		0.6
+			NameGenerator		DrinkDefault
+			}
+		]
+	Features
+		[
+			{
+			Name 		"Water"
+			Spec		System
+			Description	"The main part, the system of any drink"
+			DevTime		5
+			CodeArt		1
+			Submarkets	[ 1; 0; 1 ]#50%, 0%, 50%
+			Features
+				[
+					{
+					Name		"Alcohol"
+					Description	"An addictive substance, but could cause legal issues if found out"
+					DevTime		18
+					Level		1
+					CodeArt		0.9
+					Submarkets	[ 1; 4; 0 ]
+                                        Unlock          1988
+                                        Script_EndOfDay "if (Product.GetVar("SellingAlcohol", true))
+	{
+	if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)  
+		{
+		LaunchLawsuit("AlocholDistributionWithoutPermit", Product.Sum, 1);  
+		Product.DevCompany.AddFans(-Product.Userbase, Product.Category);  
+		Product.Userbase = Product.Userbase * 0.12;  
+		Product.KillAwareness();  //Remove all marketing
+		Product.PutVar("SellingAlcohol", false);  
+		}
+	}"
+					}
+					{
+					Name		"Fizzy"
+					Description	"This makes the product taste a bit better"
+					DevTime		6
+					Level		3
+					CodeArt		0.5
+					Submarkets	[ 1; 0; 0 ]
+					}
+				]
+			}
+			{
+			Name 		"Sounds"
+			Spec		Audio
+			Dependencies	"Audio Tool"
+			Optional	True
+			Description	"Sometimes, its nice to be able to hear it, makes the world feel less simulated"
+			DevTime		7
+			CodeArt		0.8
+			Submarkets	[ 1; 0; 3 ]
+			}
+		]
+	}

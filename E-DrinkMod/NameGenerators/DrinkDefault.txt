@@ -1,0 +1,19 @@
+-start(base)
+-base(base2,end,stop)
+E-Drink
+New-Drink
+Smart-Drink
+E-Fluids
+New-Fluids
+Smart-Fluids
+E-Liquid Need
+New-Liquid Need
+Smart-Liquid Need
+E-Fun Liquid
+New-Fun Liquid
+Smart-Fun Liquid
+-base2(end,stop)
+ Normal Edition
+ Fun
+ 
+-end(stop)
