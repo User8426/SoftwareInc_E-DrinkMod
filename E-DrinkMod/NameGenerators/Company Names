@@ -1,0 +1,10 @@
+-start(base)
+-base(base2,end,stop)
+Drink Company
+Safe Company
+Healthy Company
+-base2(end,stop)
+LTD
+LTC
+-end(stop)
+.
