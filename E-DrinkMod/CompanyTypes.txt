@@ -1,0 +1,16 @@
+CompanyType
+	{
+	Specialization		"E-Drink Company"
+	PerYear			0.25
+	Min			4
+	Max			6
+	Frameworks		False
+	Types
+		[
+			{
+			Software	"E-Drink"
+			Category	Default
+			Chance		1
+			}
+		]
+	}
