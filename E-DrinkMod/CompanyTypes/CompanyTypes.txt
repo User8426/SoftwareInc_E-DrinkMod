@@ -5,6 +5,7 @@ CompanyType
 	Min			4
 	Max			6
 	Frameworks		False
+	Namegen                 DrinkDefault
 	Types
 		[
 			{
